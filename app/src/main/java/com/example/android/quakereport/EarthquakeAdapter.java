@@ -1,3 +1,22 @@
+package com.example.android.quakereport;
+
+import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
+import android.support.v4.content.ContextCompat;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+import com.example.android.quakereport.Earthquake;
+import com.example.android.quakereport.R;
+
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.List;
+
+
 /*
  * Copyright (C) 2016 The Android Open Source Project
  *
@@ -13,21 +32,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.quakereport;
 
-import android.content.Context;
-import android.graphics.drawable.GradientDrawable;
-import android.support.v4.content.ContextCompat;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
+        import android.content.Context;
+        import android.graphics.drawable.GradientDrawable;
+        import android.support.v4.content.ContextCompat;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.ArrayAdapter;
+        import android.widget.TextView;
+
+        import java.text.DecimalFormat;
+        import java.text.SimpleDateFormat;
+        import java.util.Date;
+        import java.util.List;
 
 /**
  * An {@link EarthquakeAdapter} knows how to create a list item layout for each earthquake
