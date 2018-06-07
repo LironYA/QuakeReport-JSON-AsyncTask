@@ -50,10 +50,13 @@ import java.util.List;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 public class EarthquakeActivity extends AppCompatActivity implements LoaderCallbacks<List<Earthquake>> {
@@ -92,8 +95,12 @@ public class EarthquakeActivity extends AppCompatActivity {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 99e45d6... AsyncTask
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
@@ -117,6 +124,9 @@ public class EarthquakeActivity extends AppCompatActivity {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
+=======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
@@ -233,6 +243,7 @@ else {
         earthquakeListView.setAdapter(adapter);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // Get the list of earthquakes from {@link QueryUtils}
         ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
@@ -260,6 +271,9 @@ else {
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 99e45d6... AsyncTask
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
@@ -291,9 +305,12 @@ else {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2dfb5488aa21d644771c8be509da870be660e0bd
+=======
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 
@@ -394,6 +411,7 @@ else {
 >>>>>>> parent of 99e45d6... AsyncTask
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
 }
@@ -416,5 +434,7 @@ else {
 >>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
