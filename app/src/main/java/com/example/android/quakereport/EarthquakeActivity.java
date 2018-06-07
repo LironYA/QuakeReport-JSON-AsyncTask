@@ -23,18 +23,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 <<<<<<< HEAD
@@ -69,10 +57,13 @@ public class EarthquakeActivity extends AppCompatActivity {
     private ProgressBar progressBar;
 =======
 public class EarthquakeActivity extends AppCompatActivity {
+<<<<<<< HEAD
     /** Adapter for the list of earthquakes */
     private static final String EARTHQUAKE_JSON_RESPONSE = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10";
     private EarthquakeAdapter mAdapter;
 >>>>>>> parent of 8c45a19... AsyncTask updates
+=======
+>>>>>>> parent of 99e45d6... AsyncTask
 
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
 
@@ -115,15 +106,18 @@ else {
 =======
 >>>>>>> parent of 8c45a19... AsyncTask updates
 
+        // Get the list of earthquakes from {@link QueryUtils}
+        ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
+
         // Find a reference to the {@link ListView} in the layout
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
-        // Kick off an {@link AsyncTask} to perform the network request
-        EarthquakeAsyncTask task = new EarthquakeAsyncTask();
-        task.execute(EARTHQUAKE_JSON_RESPONSE);
-        // Create a new adapter that takes an empty list of earthquakes as input
-        mAdapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());
+
+        // Create a new adapter that takes the list of earthquakes as input
+        final EarthquakeAdapter adapter = new EarthquakeAdapter(this, earthquakes);
+
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
+<<<<<<< HEAD
         earthquakeListView.setAdapter(mAdapter);
 =======
 
@@ -205,6 +199,10 @@ else {
         earthquakeListView.setAdapter(adapter);
 
 >>>>>>> parent of 99e45d6... AsyncTask
+=======
+        earthquakeListView.setAdapter(adapter);
+
+>>>>>>> parent of 99e45d6... AsyncTask
         // Set an item click listener on the ListView, which sends an intent to a web browser
         // to open a website with more information about the selected earthquake.
         earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -223,6 +221,7 @@ else {
                 startActivity(websiteIntent);
             }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -270,6 +269,10 @@ else {
 
     }
 
+=======
+    }
+}
+>>>>>>> parent of 99e45d6... AsyncTask
 =======
     }
 }
