@@ -7,7 +7,8 @@ Progress Bar
 , Using Loader
 , Date and time formatting
 
-On the 
+Loaders branch contains original code
+
 
 Quake Report App
 ===================================
