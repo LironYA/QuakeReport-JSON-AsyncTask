@@ -23,8 +23,21 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,12 +74,20 @@ public class EarthquakeActivity extends AppCompatActivity {
 
 >>>>>>> 2dfb5488aa21d644771c8be509da870be660e0bd
 
+=======
+public class EarthquakeActivity extends AppCompatActivity {
+    /** Adapter for the list of earthquakes */
+    private static final String EARTHQUAKE_JSON_RESPONSE = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10";
+    private EarthquakeAdapter mAdapter;
+
+>>>>>>> parent of 8c45a19... AsyncTask updates
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_activity);
+<<<<<<< HEAD
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
         earthquakeListView.setEmptyView(mEmptyStateTextView);
@@ -111,6 +132,18 @@ else {
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
 <<<<<<< HEAD
+=======
+
+        // Find a reference to the {@link ListView} in the layout
+        ListView earthquakeListView = (ListView) findViewById(R.id.list);
+        // Kick off an {@link AsyncTask} to perform the network request
+        EarthquakeAsyncTask task = new EarthquakeAsyncTask();
+        task.execute(EARTHQUAKE_JSON_RESPONSE);
+        // Create a new adapter that takes an empty list of earthquakes as input
+        mAdapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());
+        // Set the adapter on the {@link ListView}
+        // so the list can be populated in the user interface
+>>>>>>> parent of 8c45a19... AsyncTask updates
         earthquakeListView.setAdapter(mAdapter);
 
 
@@ -228,6 +261,7 @@ else {
                 return null;
             }
 
+<<<<<<< HEAD
             List<Earthquake> result = QueryUtils.fetchEarthquakeData(urls[0]);
             return result;
         }
@@ -255,9 +289,42 @@ else {
          */
 
     }
+=======
+
+    }
+    class EarthquakeAsyncTask extends AsyncTask <String, Void,  List<Earthquake>> {
+
+        @Override
+        protected List<Earthquake> doInBackground(String... urls) {
+            // Don't perform the request if there are no URLs, or the first URL is null.
+            if (urls.length < 1 || urls[0] == null) {
+                return null;
+            }
+
+            List<Earthquake> result = QueryUtils.fetchEarthquakeData(urls[0]);
+            return result;
+        }
+
+            @Override
+            protected void onPostExecute(List<Earthquake> data) {
+                // Clear the adapter of previous earthquake data
+                mAdapter.clear();
+
+                // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+                // data set. This will trigger the ListView to update.
+                if (data != null && !data.isEmpty()) {
+                    mAdapter.addAll(data);
+                }
+            }
+        /**
+         * Returns new URL object from the given string URL.
+         */
+
+>>>>>>> parent of 8c45a19... AsyncTask updates
 
     }
 
+<<<<<<< HEAD
     }
 }
 <<<<<<< HEAD
@@ -281,3 +348,14 @@ else {
 =======
 
 >>>>>>> 2dfb5488aa21d644771c8be509da870be660e0bd
+=======
+        /**
+         * Return an {@link ArrayList} object by parsing out information
+         * about the first earthquake from the input earthquakeJSON string.
+         */
+
+    }
+
+    }
+
+>>>>>>> parent of 8c45a19... AsyncTask updates

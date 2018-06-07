@@ -23,6 +23,7 @@
 <<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
@@ -40,6 +41,8 @@
 =======
 
 >>>>>>> parent of 99e45d6... AsyncTask
+=======
+>>>>>>> parent of 8c45a19... AsyncTask updates
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
