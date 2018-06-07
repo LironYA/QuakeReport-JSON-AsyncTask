@@ -15,25 +15,29 @@
  */
 package com.example.android.quakereport;
 
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.support.v4.content.Loader;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.app.LoaderManager;
-import android.app.LoaderManager.LoaderCallbacks;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,12 +67,20 @@ public class EarthquakeActivity extends AppCompatActivity {
 >>>>>>> parent of 99e45d6... AsyncTask
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
     private ProgressBar progressBar;
+=======
+public class EarthquakeActivity extends AppCompatActivity {
+    /** Adapter for the list of earthquakes */
+    private static final String EARTHQUAKE_JSON_RESPONSE = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10";
+    private EarthquakeAdapter mAdapter;
+>>>>>>> parent of 8c45a19... AsyncTask updates
 
+    public static final String LOG_TAG = EarthquakeActivity.class.getName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_activity);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,12 +112,18 @@ else {
 }
 
 
+=======
+>>>>>>> parent of 8c45a19... AsyncTask updates
 
+        // Find a reference to the {@link ListView} in the layout
+        ListView earthquakeListView = (ListView) findViewById(R.id.list);
+        // Kick off an {@link AsyncTask} to perform the network request
+        EarthquakeAsyncTask task = new EarthquakeAsyncTask();
+        task.execute(EARTHQUAKE_JSON_RESPONSE);
         // Create a new adapter that takes an empty list of earthquakes as input
         mAdapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
-
         earthquakeListView.setAdapter(mAdapter);
 =======
 
@@ -211,38 +229,46 @@ else {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+
+    }
+    class EarthquakeAsyncTask extends AsyncTask <String, Void,  List<Earthquake>> {
+
+        @Override
+        protected List<Earthquake> doInBackground(String... urls) {
+            // Don't perform the request if there are no URLs, or the first URL is null.
+            if (urls.length < 1 || urls[0] == null) {
+                return null;
+            }
+
+            List<Earthquake> result = QueryUtils.fetchEarthquakeData(urls[0]);
+            return result;
         }
 
+            @Override
+            protected void onPostExecute(List<Earthquake> data) {
+                // Clear the adapter of previous earthquake data
+                mAdapter.clear();
+
+                // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+                // data set. This will trigger the ListView to update.
+                if (data != null && !data.isEmpty()) {
+                    mAdapter.addAll(data);
+                }
+            }
+        /**
+         * Returns new URL object from the given string URL.
+         */
 
 
-    @Override
-    public android.content.Loader<List<Earthquake>> onCreateLoader(int i, Bundle bundle) {
-        return new EarthquakeLoader(EarthquakeActivity.this, EARTHQUAKE_JSON_RESPONSE);
+
+        /**
+         * Return an {@link ArrayList} object by parsing out information
+         * about the first earthquake from the input earthquakeJSON string.
+         */
+
     }
 
-    @Override
-    public void onLoadFinished(android.content.Loader<List<Earthquake>> loader, List<Earthquake> data) {
-        progressBar.setVisibility(View.GONE);
-        mEmptyStateTextView.setText("No earthquakes found");
-        // Clear the adapter of previous earthquake data
-        mAdapter.clear();
-
-        // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
-        // data set. This will trigger the ListView to update.
-        if (data != null && !data.isEmpty()) {
-            mAdapter.addAll(data);
-        }
-
     }
-
-    @Override
-    public void onLoaderReset(android.content.Loader<List<Earthquake>> loader) {
-        mAdapter.clear();
-    }
-
-
-}
-
 
 =======
     }
