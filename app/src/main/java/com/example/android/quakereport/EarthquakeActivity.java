@@ -58,10 +58,13 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
     private TextView mEmptyStateTextView;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 public class EarthquakeActivity extends AppCompatActivity {
 
 >>>>>>> parent of 99e45d6... AsyncTask
+=======
+>>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 71c5935... AsyncTask
 =======
@@ -89,6 +92,9 @@ public class EarthquakeActivity extends AppCompatActivity {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 71c5935... AsyncTask
 =======
@@ -134,6 +140,7 @@ else {
         earthquakeListView.setAdapter(mAdapter);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         // Get the list of earthquakes from {@link QueryUtils}
@@ -214,6 +221,8 @@ else {
         earthquakeListView.setAdapter(adapter);
 
 >>>>>>> parent of 99e45d6... AsyncTask
+=======
+>>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 71c5935... AsyncTask
 =======
@@ -243,6 +252,7 @@ else {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> parent of 71c5935... AsyncTask
@@ -251,6 +261,8 @@ else {
 
     }
     class EarthquakeAsyncTask extends AsyncTask <String, Void,  List<Earthquake>> {
+=======
+>>>>>>> parent of 71c5935... AsyncTask
 
         @Override
         protected List<Earthquake> doInBackground(String... urls) {
@@ -294,6 +306,7 @@ else {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 99e45d6... AsyncTask
 =======
     }
@@ -311,6 +324,10 @@ else {
     }
 }
 >>>>>>> parent of 99e45d6... AsyncTask
+=======
+
+
+>>>>>>> parent of 71c5935... AsyncTask
 =======
 
 
