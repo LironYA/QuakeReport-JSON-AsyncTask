@@ -57,10 +57,13 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
     /** TextView that is displayed when the list is empty */
     private TextView mEmptyStateTextView;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 public class EarthquakeActivity extends AppCompatActivity {
 
 >>>>>>> parent of 99e45d6... AsyncTask
+=======
+>>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 71c5935... AsyncTask
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
@@ -85,6 +88,9 @@ public class EarthquakeActivity extends AppCompatActivity {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 71c5935... AsyncTask
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
@@ -127,6 +133,7 @@ else {
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(mAdapter);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         // Get the list of earthquakes from {@link QueryUtils}
@@ -209,6 +216,8 @@ else {
 >>>>>>> parent of 99e45d6... AsyncTask
 =======
 >>>>>>> parent of 71c5935... AsyncTask
+=======
+>>>>>>> parent of 71c5935... AsyncTask
         // Set an item click listener on the ListView, which sends an intent to a web browser
         // to open a website with more information about the selected earthquake.
         earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -233,7 +242,10 @@ else {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 71c5935... AsyncTask
 
@@ -281,6 +293,7 @@ else {
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 99e45d6... AsyncTask
 =======
     }
@@ -298,6 +311,10 @@ else {
     }
 }
 >>>>>>> parent of 99e45d6... AsyncTask
+=======
+
+
+>>>>>>> parent of 71c5935... AsyncTask
 =======
 
 
