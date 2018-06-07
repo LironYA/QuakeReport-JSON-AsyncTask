@@ -21,10 +21,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 71c5935... AsyncTask
     <uses-permission android:name="android.permission.INTERNET" />
 <<<<<<< HEAD
 <<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
 =======
@@ -35,6 +39,8 @@
 >>>>>>> parent of 99e45d6... AsyncTask
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
+=======
+>>>>>>> parent of 71c5935... AsyncTask
 
 =======
 >>>>>>> parent of 8c45a19... AsyncTask updates

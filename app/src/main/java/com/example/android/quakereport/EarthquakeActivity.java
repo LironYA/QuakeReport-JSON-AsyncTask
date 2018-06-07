@@ -17,8 +17,10 @@ package com.example.android.quakereport;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -36,6 +38,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.List;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +47,9 @@ import java.util.ArrayList;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 71c5935... AsyncTask
 public class EarthquakeActivity extends AppCompatActivity implements LoaderCallbacks<List<Earthquake>> {
     /**
      * Constant value for the earthquake loader ID. We can choose any integer.
@@ -54,10 +60,13 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
     private EarthquakeAdapter mAdapter;
     /** TextView that is displayed when the list is empty */
     private TextView mEmptyStateTextView;
+<<<<<<< HEAD
 
 public class EarthquakeActivity extends AppCompatActivity {
 
 
+=======
+>>>>>>> parent of 71c5935... AsyncTask
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
     private ProgressBar progressBar;
 
@@ -87,7 +96,6 @@ public class EarthquakeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_activity);
-<<<<<<< HEAD
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
         earthquakeListView.setEmptyView(mEmptyStateTextView);
@@ -145,6 +153,7 @@ else {
         // so the list can be populated in the user interface
 >>>>>>> parent of 8c45a19... AsyncTask updates
         earthquakeListView.setAdapter(mAdapter);
+<<<<<<< HEAD
 
 
         // Get the list of earthquakes from {@link QueryUtils}
@@ -222,13 +231,15 @@ else {
 >>>>>>> parent of 99e45d6... AsyncTask
 =======
 >>>>>>> 2dfb5488aa21d644771c8be509da870be660e0bd
+=======
+>>>>>>> parent of 71c5935... AsyncTask
         // Set an item click listener on the ListView, which sends an intent to a web browser
         // to open a website with more information about the selected earthquake.
         earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // Find the current earthquake that was clicked on
-                Earthquake currentEarthquake = adapter.getItem(position);
+                Earthquake currentEarthquake = mAdapter.getItem(position);
 
                 // Convert the String URL into a URI object (to pass into the Intent constructor)
                 Uri earthquakeUri = Uri.parse(currentEarthquake.getUrl());
@@ -247,6 +258,7 @@ else {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2dfb5488aa21d644771c8be509da870be660e0bd
@@ -260,6 +272,8 @@ else {
             if (urls.length < 1 || urls[0] == null) {
                 return null;
             }
+=======
+>>>>>>> parent of 71c5935... AsyncTask
 
 <<<<<<< HEAD
             List<Earthquake> result = QueryUtils.fetchEarthquakeData(urls[0]);
@@ -325,6 +339,7 @@ else {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 }
 <<<<<<< HEAD
@@ -359,3 +374,5 @@ else {
     }
 
 >>>>>>> parent of 8c45a19... AsyncTask updates
+=======
+>>>>>>> parent of 71c5935... AsyncTask
