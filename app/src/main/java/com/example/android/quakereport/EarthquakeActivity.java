@@ -53,26 +53,18 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
     private EarthquakeAdapter mAdapter;
     /** TextView that is displayed when the list is empty */
     private TextView mEmptyStateTextView;
-=======
-=======
->>>>>>> parent of 99e45d6... AsyncTask
-=======
->>>>>>> parent of 99e45d6... AsyncTask
-=======
->>>>>>> parent of 99e45d6... AsyncTask
-=======
->>>>>>> parent of 99e45d6... AsyncTask
+
 public class EarthquakeActivity extends AppCompatActivity {
 
->>>>>>> parent of 99e45d6... AsyncTask
+
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
     private ProgressBar progressBar;
-=======
+
 public class EarthquakeActivity extends AppCompatActivity {
     /** Adapter for the list of earthquakes */
     private static final String EARTHQUAKE_JSON_RESPONSE = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10";
     private EarthquakeAdapter mAdapter;
->>>>>>> parent of 8c45a19... AsyncTask updates
+
 
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
 
@@ -80,12 +72,6 @@ public class EarthquakeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_activity);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
         earthquakeListView.setEmptyView(mEmptyStateTextView);
@@ -112,9 +98,6 @@ else {
 }
 
 
-=======
->>>>>>> parent of 8c45a19... AsyncTask updates
-
         // Find a reference to the {@link ListView} in the layout
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
         // Kick off an {@link AsyncTask} to perform the network request
@@ -125,7 +108,7 @@ else {
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(mAdapter);
-=======
+
 
         // Get the list of earthquakes from {@link QueryUtils}
         ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
@@ -140,8 +123,6 @@ else {
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(adapter);
 
->>>>>>> parent of 99e45d6... AsyncTask
-=======
 
         // Get the list of earthquakes from {@link QueryUtils}
         ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
@@ -156,8 +137,18 @@ else {
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(adapter);
 
->>>>>>> parent of 99e45d6... AsyncTask
-=======
+        // Get the list of earthquakes from {@link QueryUtils}
+        ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
+
+        // Find a reference to the {@link ListView} in the layout
+        ListView earthquakeListView = (ListView) findViewById(R.id.list);
+
+        // Create a new adapter that takes the list of earthquakes as input
+        final EarthquakeAdapter adapter = new EarthquakeAdapter(this, earthquakes);
+
+        // Set the adapter on the {@link ListView}
+        // so the list can be populated in the user interface
+        earthquakeListView.setAdapter(adapter);
 
         // Get the list of earthquakes from {@link QueryUtils}
         ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
@@ -172,8 +163,6 @@ else {
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(adapter);
 
->>>>>>> parent of 99e45d6... AsyncTask
-=======
 
         // Get the list of earthquakes from {@link QueryUtils}
         ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
@@ -188,23 +177,6 @@ else {
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(adapter);
 
->>>>>>> parent of 99e45d6... AsyncTask
-=======
-
-        // Get the list of earthquakes from {@link QueryUtils}
-        ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
-
-        // Find a reference to the {@link ListView} in the layout
-        ListView earthquakeListView = (ListView) findViewById(R.id.list);
-
-        // Create a new adapter that takes the list of earthquakes as input
-        final EarthquakeAdapter adapter = new EarthquakeAdapter(this, earthquakes);
-
-        // Set the adapter on the {@link ListView}
-        // so the list can be populated in the user interface
-        earthquakeListView.setAdapter(adapter);
-
->>>>>>> parent of 99e45d6... AsyncTask
         // Set an item click listener on the ListView, which sends an intent to a web browser
         // to open a website with more information about the selected earthquake.
         earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -223,12 +195,6 @@ else {
                 startActivity(websiteIntent);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
     }
     class EarthquakeAsyncTask extends AsyncTask <String, Void,  List<Earthquake>> {
@@ -270,23 +236,6 @@ else {
 
     }
 
-=======
     }
 }
->>>>>>> parent of 99e45d6... AsyncTask
-=======
-    }
-}
->>>>>>> parent of 99e45d6... AsyncTask
-=======
-    }
-}
->>>>>>> parent of 99e45d6... AsyncTask
-=======
-    }
-}
->>>>>>> parent of 99e45d6... AsyncTask
-=======
-    }
-}
->>>>>>> parent of 99e45d6... AsyncTask
+
