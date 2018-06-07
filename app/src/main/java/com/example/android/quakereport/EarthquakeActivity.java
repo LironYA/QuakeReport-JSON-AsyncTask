@@ -15,13 +15,20 @@
  */
 package com.example.android.quakereport;
 
+import android.app.LoaderManager;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -36,13 +43,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.List;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 public class EarthquakeActivity extends AppCompatActivity implements LoaderCallbacks<List<Earthquake>> {
     /**
      * Constant value for the earthquake loader ID. We can choose any integer.
@@ -53,15 +55,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
     private EarthquakeAdapter mAdapter;
     /** TextView that is displayed when the list is empty */
     private TextView mEmptyStateTextView;
-=======
-=======
->>>>>>> parent of 99e45d6... AsyncTask
-=======
->>>>>>> parent of 99e45d6... AsyncTask
-=======
->>>>>>> parent of 99e45d6... AsyncTask
-=======
->>>>>>> parent of 99e45d6... AsyncTask
+
 public class EarthquakeActivity extends AppCompatActivity {
 
 >>>>>>> parent of 99e45d6... AsyncTask
