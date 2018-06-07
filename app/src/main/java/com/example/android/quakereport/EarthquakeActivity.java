@@ -15,31 +15,29 @@
  */
 package com.example.android.quakereport;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.support.v4.content.Loader;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.app.LoaderManager;
+import android.app.LoaderManager.LoaderCallbacks;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,6 +60,8 @@ import java.util.List;
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
+=======
+>>>>>>> parent of 53fefa3... Revert "AsyncTask updates"
 public class EarthquakeActivity extends AppCompatActivity implements LoaderCallbacks<List<Earthquake>> {
     /**
      * Constant value for the earthquake loader ID. We can choose any integer.
@@ -107,6 +107,7 @@ public class EarthquakeActivity extends AppCompatActivity {
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
+<<<<<<< HEAD
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
@@ -117,6 +118,11 @@ public class EarthquakeActivity extends AppCompatActivity {
 
 >>>>>>> parent of 8c45a19... AsyncTask updates
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
+=======
+    public static final String LOG_TAG = EarthquakeActivity.class.getName();
+    private ProgressBar progressBar;
+
+>>>>>>> parent of 53fefa3... Revert "AsyncTask updates"
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,11 +138,14 @@ public class EarthquakeActivity extends AppCompatActivity {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
+=======
+>>>>>>> parent of 53fefa3... Revert "AsyncTask updates"
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
         earthquakeListView.setEmptyView(mEmptyStateTextView);
@@ -164,6 +173,7 @@ else {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 8c45a19... AsyncTask updates
 
@@ -188,11 +198,18 @@ else {
         // Kick off an {@link AsyncTask} to perform the network request
         EarthquakeAsyncTask task = new EarthquakeAsyncTask();
         task.execute(EARTHQUAKE_JSON_RESPONSE);
+=======
+
+>>>>>>> parent of 53fefa3... Revert "AsyncTask updates"
         // Create a new adapter that takes an empty list of earthquakes as input
         mAdapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
+<<<<<<< HEAD
 >>>>>>> parent of 8c45a19... AsyncTask updates
+=======
+
+>>>>>>> parent of 53fefa3... Revert "AsyncTask updates"
         earthquakeListView.setAdapter(mAdapter);
 <<<<<<< HEAD
 
@@ -323,6 +340,7 @@ else {
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 
+<<<<<<< HEAD
 =======
 >>>>>>> 2dfb5488aa21d644771c8be509da870be660e0bd
 =======
@@ -347,36 +365,40 @@ else {
 <<<<<<< HEAD
             List<Earthquake> result = QueryUtils.fetchEarthquakeData(urls[0]);
             return result;
+=======
+>>>>>>> parent of 53fefa3... Revert "AsyncTask updates"
         }
 
-            @Override
-            protected void onPostExecute(List<Earthquake> data) {
-                // Clear the adapter of previous earthquake data
-                mAdapter.clear();
-
-                // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
-                // data set. This will trigger the ListView to update.
-                if (data != null && !data.isEmpty()) {
-                    mAdapter.addAll(data);
-                }
-            }
-        /**
-         * Returns new URL object from the given string URL.
-         */
 
 
+    @Override
+    public android.content.Loader<List<Earthquake>> onCreateLoader(int i, Bundle bundle) {
+        return new EarthquakeLoader(EarthquakeActivity.this, EARTHQUAKE_JSON_RESPONSE);
+    }
 
-        /**
-         * Return an {@link ArrayList} object by parsing out information
-         * about the first earthquake from the input earthquakeJSON string.
-         */
+    @Override
+    public void onLoadFinished(android.content.Loader<List<Earthquake>> loader, List<Earthquake> data) {
+        progressBar.setVisibility(View.GONE);
+        mEmptyStateTextView.setText("No earthquakes found");
+        // Clear the adapter of previous earthquake data
+        mAdapter.clear();
+
+        // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+        // data set. This will trigger the ListView to update.
+        if (data != null && !data.isEmpty()) {
+            mAdapter.addAll(data);
+        }
 
     }
 =======
 
+    @Override
+    public void onLoaderReset(android.content.Loader<List<Earthquake>> loader) {
+        mAdapter.clear();
     }
     class EarthquakeAsyncTask extends AsyncTask <String, Void,  List<Earthquake>> {
 
+<<<<<<< HEAD
         @Override
         protected List<Earthquake> doInBackground(String... urls) {
             // Don't perform the request if there are no URLs, or the first URL is null.
@@ -409,6 +431,13 @@ else {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+}
+
+
+=======
+>>>>>>> parent of 53fefa3... Revert "AsyncTask updates"
     }
 }
 <<<<<<< HEAD
