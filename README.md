@@ -1,11 +1,11 @@
 On the Loader branch:
 Progress Bar
-Checking internet connectivity
-Checking if no data is returned from the server
-Populate a list of ArrayList with the returned earthquake data
-Opening a new link once a list item is being clicked on
-Using Loader
-Date and time formatting
+, Checking internet connectivity
+, Checking if no data is returned from the server
+, Populate a list of ArrayList with the returned earthquake data
+, Opening a new link once a list item is being clicked on
+, Using Loader
+, Date and time formatting
 
 On the 
 
