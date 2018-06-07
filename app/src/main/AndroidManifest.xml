@@ -19,8 +19,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+=======
+>>>>>>> parent of 99e45d6... AsyncTask
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
 =======

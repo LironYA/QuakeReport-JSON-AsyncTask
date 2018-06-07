@@ -38,6 +38,7 @@ import java.util.ArrayList;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class EarthquakeActivity extends AppCompatActivity implements LoaderCallbacks<List<Earthquake>> {
     /**
      * Constant value for the earthquake loader ID. We can choose any integer.
@@ -55,6 +56,8 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
 >>>>>>> parent of 99e45d6... AsyncTask
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
+=======
+>>>>>>> parent of 99e45d6... AsyncTask
 public class EarthquakeActivity extends AppCompatActivity {
 
 >>>>>>> parent of 99e45d6... AsyncTask
@@ -66,6 +69,7 @@ public class EarthquakeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_activity);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,6 +171,22 @@ else {
         earthquakeListView.setAdapter(adapter);
 
 >>>>>>> parent of 99e45d6... AsyncTask
+=======
+
+        // Get the list of earthquakes from {@link QueryUtils}
+        ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
+
+        // Find a reference to the {@link ListView} in the layout
+        ListView earthquakeListView = (ListView) findViewById(R.id.list);
+
+        // Create a new adapter that takes the list of earthquakes as input
+        final EarthquakeAdapter adapter = new EarthquakeAdapter(this, earthquakes);
+
+        // Set the adapter on the {@link ListView}
+        // so the list can be populated in the user interface
+        earthquakeListView.setAdapter(adapter);
+
+>>>>>>> parent of 99e45d6... AsyncTask
         // Set an item click listener on the ListView, which sends an intent to a web browser
         // to open a website with more information about the selected earthquake.
         earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -185,6 +205,7 @@ else {
                 startActivity(websiteIntent);
             }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,6 +244,10 @@ else {
 }
 
 
+=======
+    }
+}
+>>>>>>> parent of 99e45d6... AsyncTask
 =======
     }
 }
