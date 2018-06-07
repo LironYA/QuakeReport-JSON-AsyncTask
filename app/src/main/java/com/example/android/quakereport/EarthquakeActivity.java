@@ -49,10 +49,13 @@ import java.util.List;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 public class EarthquakeActivity extends AppCompatActivity implements LoaderCallbacks<List<Earthquake>> {
     /**
      * Constant value for the earthquake loader ID. We can choose any integer.
@@ -88,8 +91,12 @@ public class EarthquakeActivity extends AppCompatActivity {
 >>>>>>> 2dfb5488aa21d644771c8be509da870be660e0bd
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 99e45d6... AsyncTask
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 public class EarthquakeActivity extends AppCompatActivity {
     /** Adapter for the list of earthquakes */
     private static final String EARTHQUAKE_JSON_RESPONSE = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10";
@@ -105,7 +112,12 @@ public class EarthquakeActivity extends AppCompatActivity {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 23213c2... 1
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
         earthquakeListView.setEmptyView(mEmptyStateTextView);
@@ -220,6 +232,7 @@ else {
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(adapter);
 
+<<<<<<< HEAD
 
         // Get the list of earthquakes from {@link QueryUtils}
         ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
@@ -247,6 +260,9 @@ else {
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 99e45d6... AsyncTask
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
         // Set an item click listener on the ListView, which sends an intent to a web browser
         // to open a website with more information about the selected earthquake.
         earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -274,9 +290,12 @@ else {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2dfb5488aa21d644771c8be509da870be660e0bd
+=======
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 
     }
     class EarthquakeAsyncTask extends AsyncTask <String, Void,  List<Earthquake>> {
@@ -374,6 +393,7 @@ else {
 }
 >>>>>>> parent of 99e45d6... AsyncTask
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
 }
@@ -396,3 +416,5 @@ else {
 >>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
