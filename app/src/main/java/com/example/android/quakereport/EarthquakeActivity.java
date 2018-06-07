@@ -51,10 +51,13 @@ import java.util.List;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
@@ -100,9 +103,12 @@ public class EarthquakeActivity extends AppCompatActivity {
 >>>>>>> parent of 23213c2... 1
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
+<<<<<<< HEAD
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
+=======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 public class EarthquakeActivity extends AppCompatActivity {
     /** Adapter for the list of earthquakes */
@@ -125,6 +131,9 @@ public class EarthquakeActivity extends AppCompatActivity {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
+=======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
@@ -244,6 +253,7 @@ else {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // Get the list of earthquakes from {@link QueryUtils}
         ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
@@ -271,6 +281,9 @@ else {
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 99e45d6... AsyncTask
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 99e45d6... AsyncTask
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
@@ -306,6 +319,9 @@ else {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 
 =======
 >>>>>>> 2dfb5488aa21d644771c8be509da870be660e0bd
@@ -412,6 +428,7 @@ else {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
 }
@@ -434,6 +451,8 @@ else {
 >>>>>>> parent of 71c5935... AsyncTask
 =======
 >>>>>>> parent of 23213c2... 1
+=======
+>>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
 >>>>>>> parent of 8d4ddb5... Revert "AsyncTask"
 =======
